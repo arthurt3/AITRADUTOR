@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI LIBRAS</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #f0f4f8, #e9ecef);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 30px 25px;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+      max-width: 600px;
+      width: 90%;
+      text-align: center;
+      z-index: 1;
+    }
+
+    h2 {
+      margin-bottom: 12px;
+      font-size: 26px;
+      color: #0b5ed7;
+    }
+
+    p {
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 15px;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 120px;
+      font-size: 16px;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      resize: vertical;
+      transition: border 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    textarea:focus {
+      outline: none;
+      border-color: #0b5ed7;
+      box-shadow: 0 0 8px rgba(11,94,215,0.2);
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: none;
+      background: #0b5ed7;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.1s ease;
+    }
+
+    button:hover {
+      background: #084298;
+      transform: translateY(-2px);
+    }
+
+    button:active {
+      transform: translateY(0);
+    }
+
+    /* Avatar VLibras centralizado */
+    #vlibras-wrapper {
+      position: fixed;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%) scale(1.6);
+      z-index: 9999;
+      pointer-events: auto;
+      text-align: center;
+    }
+
+    /* Div visível, mas discreta, para o VLibras ler */
+    #to_translate {
+      position: fixed;
+      top: -100px; /* fora da tela */
+      left: -100px;
+      font-size: 16px;
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="vlibras-wrapper" vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper></div>
+  </div>
+
+  <div class="card">
+    <h2>Text → LIBRAS</h2>
+    <p>Digite a frase e pressione <b>Enter</b> ou clique <b>Traduzir</b>. O avatar aparecerá centralizado acima.</p>
+
+    <textarea id="text" placeholder="Ex.: Bom dia, tudo bem?"></textarea>
+    <button id="btnTranslate">Traduzir</button>
+  </div>
+
+  <!-- Esta div é lida pelo VLibras -->
+  <div id="to_translate" aria-hidden="true"></div>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    const textarea = document.getElementById('text');
+    const btnTranslate = document.getElementById('btnTranslate');
+    const target = document.getElementById('to_translate');
+
+    // Inicializa VLibras
+    const vlibrasWidget = new window.VLibras.Widget('https://vlibras.gov.br/app');
+
+    function traduzirTexto(text) {
+      target.textContent = text;
+      target.dispatchEvent(new Event('input', { bubbles: true }));
+    }
+
+    btnTranslate.addEventListener('click', () => {
+      const txt = textarea.value.trim();
+      if (!txt) return;
+      traduzirTexto(txt);
+      textarea.value = '';
+    });
+
+    textarea.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        const txt = textarea.value.trim();
+        if (!txt) return;
+        traduzirTexto(txt);
+        textarea.value = '';
+      }
+    });
+  </script>
+</body>
+</html>

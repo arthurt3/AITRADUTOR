@@ -1,0 +1,395 @@
+@font-face {
+    font-family: textinho;
+    src: url(/FONTS/din-next-w1g-light-maisfontes.a5c7/din-next-w1g-light.otf);
+}
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+@font-face {
+    font-family: valorant;
+    src: url(/FONTS/FontsFree-Net-Tungsten-Bold.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(19,19,19,1) 55%, rgba(0,0,0,0.9052871148459384) 100%);
+    overflow-x: hidden;
+}
+
+
+
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+header{
+    font-family: 'Rubik',sans-serif;
+    background-color: rgb(0, 0, 0);
+    padding: 15px 5%;
+    position: sticky;
+    top: -1px;
+}
+
+.front{
+    max-width: 150px;
+    max-height: 150px;
+}
+
+header a:hover{
+    transform: scale(1.1);
+    color:  #440de1;
+}
+
+header > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 7vh;
+    
+}
+
+header a {
+    color: rgb(255, 243, 243);
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.2s;
+    color: rgb(253, 244, 255);
+    font-size: 14px;
+}
+
+header a::after{
+    position: absolute;
+    content: '';
+    right: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: #440de1;
+    border-radius: 8px;
+    transition: all ease .45s;
+}
+
+header a:hover::after{
+    width: 100%;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 30px;
+}
+
+.menu-desktop{
+    margin-top: 15px;
+    font-family: "textinho", sans-serif;
+    font-size: 24px;
+}
+
+.btn-contato button{
+    padding: 10px 50px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: rgba(47, 0, 255, 0);
+    border: solid 3px #440de1;
+    cursor: pointer;
+    color: #440de1;
+}
+
+.fell{
+    animation: slideinleft 1s ease-in;
+}
+
+@keyframes slideinleft{
+    from{
+        transform: translateX(-300px);
+    }
+    to{transform: translateX(0);}
+}
+
+.fell{
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fell{
+    color: aliceblue;
+}
+
+.future{
+    color: #440de1 ;
+}
+
+.mp4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.txt-1{
+    background-color: rgb(255, 255, 255);
+    font-size: 18px;
+    color: #000000;
+    display: flex;
+    text-align: start;
+    justify-content:space-between;
+    font-family:"valorant", sans-serif;
+    padding-bottom: 90px;
+}
+
+.txt-2{
+    padding: 200px;
+    padding-left: 50px;
+}
+
+.txt{
+    font-size:28px;
+    font-family: "textinho",sans-serif ;
+}
+
+.background-section{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.background-section video{
+    width: 100%;
+    height: 100%;
+}
+#vestibular{
+    display: flex;
+    justify-content: space-between;
+    background-color: #000000;
+    height: 100vh;
+
+}
+
+#vestibular > h1{
+    color: #ffffff;
+    font-size: 3rem;
+    font-family: "valorant", sans-serif;
+    padding-top: 30px;
+    
+    
+}
+
+.post{
+    width: 700px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+
+.textinho{
+    font-family: "textinho", sans-serif;
+}
+
+.txt-3{
+    font-size: 22px;
+    color: #ffffff;
+    padding: 50px;
+    align-items: center;
+    font-weight: 400;
+    padding-top: 130px;
+}
+
+.img-graduacao{
+    width: 700px;
+    height: 600px;
+    padding-right: 80px;
+    padding-top: 170px;
+}
+
+.graduacao{
+    background-color: antiquewhite;
+}
+
+.valorant{
+    font-family: "valorant", sans-serif;
+    font-size: 5rem;
+    font-weight: 700;
+
+}
+
+.curio {
+        background-color: #440de1;
+        color: #ffffff;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        font-family:"textinho", serif ;
+        display: flex ;
+        justify-content: center;
+        text-decoration: none;
+}
+
+.curio:hover{
+    transition: .5s;
+    background-color: #000000;
+}
+
+#cursos{
+    color: #ffffff;
+    background-color: #440de1;
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 80px;
+    padding-top: 40px;
+}
+
+.cursos1{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.cursos-1{
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    height: 35vh;
+    cursor: pointer;
+    border: 1px solid white;
+}
+
+.cursos2{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.cursos-2{
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    height: 35vh;
+    cursor: pointer;
+    border: 1px solid white;
+}
+
+.card-curso{
+    display: flex;
+    justify-content: center;
+    font-family: "valorant", sans-serif;
+    font-size: 4rem;
+}
+
+.principal{
+    font-family: "textinho", sans-serif;
+    font-weight: 900;
+    font-size: 28px;
+}
+
+.desc{
+    font-family: "textinho", sans-serif;
+    font-weight: 500;
+}
+
+.descricao{
+    padding: 40px;
+}
+
+.cursos-1:hover{
+    transition: .4s;
+    background-color: #000000;
+}
+
+.cursos-2:hover{
+    transition: .4s;
+    background-color: #000000;
+}
+
+section#formulario{
+    padding: 80px 4%;
+}
+
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+form input, form textarea{
+    width: 100%;
+    background-color: #48474794;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: aliceblue;
+    font-size: 18px;
+}
+form textarea{
+    resize: none;
+    max-height: 150px;
+}
+
+form .btn-enviar {
+    margin-top: 40px;
+    text-align: center;
+    font-family: "textinho", sans-serif;
+}
+
+form .btn-enviar input {
+    width: 120px;
+    background-color:#440de1;
+    color: aliceblue;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    color: #440de1;
+    font-family: "valorant", sans-serif;
+    font-size: 5rem;
+}
+
+#next{
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+
+    font-size: 28px;
+}
+
+.imgnext{
+    max-width: 1100px;
+    max-height: 1100px;
+}
+
+.tx1{
+    font-size: 28px;
+    font-family: "textinho", sans-serif;
+    padding: 80px;
+    margin: 80px;
+    font-weight: 500;
+}
