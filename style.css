@@ -1,12 +1,12 @@
 @font-face {
     font-family: textinho;
-    src: url(/FONTS/din-next-w1g-light-maisfontes.a5c7/din-next-w1g-light.otf);
+    src: url(din-next-w1g-light.otf);
 }
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
 @font-face {
     font-family: valorant;
-    src: url(/FONTS/FontsFree-Net-Tungsten-Bold.ttf);
+    src: url(FontsFree-Net-Tungsten-Bold.ttf);
 }
 
 * {
@@ -382,14 +382,14 @@ form .btn-enviar input {
 }
 
 .imgnext{
-    max-width: 1100px;
-    max-height: 1100px;
+    max-width: 700px;
+    max-height: 700px;
 }
 
 .tx1{
     font-size: 28px;
     font-family: "textinho", sans-serif;
-    padding: 80px;
-    margin: 80px;
+    padding: 60px;
+    margin: 60px;
     font-weight: 500;
 }
