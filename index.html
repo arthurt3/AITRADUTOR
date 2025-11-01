@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <title>PRO Academy</title>
+</head>
+<body>
+    <header>
+        <div class="interface">
+            <div class="logo">
+                <img class="front" src="/IMAGES/PROACADEMY.png" alt="">
+            </div>
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a href="#Graduacao">Graduação PRO</a></li>
+                    <li><a href="#vestibular">VESTIBULAR</a></li>
+                    <li><a href="#next">NEXT</a></li>
+                    <li><a href="#cursos">CURSOS</a></li>
+                    <li><a href="#formulario">CONTATO</a></li>
+                    <li><a href="#!" onclick="alert('Ative o tradutor no canto da tela!')">LIBRAS</a></li>
+                </ul>
+            </nav>
+            <div class="btn-contato">
+                <a href="#formulario">
+                    <button>Inscreva-se</button>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!--GRADUACAO-->
+    <section id="Graduacao">
+        <div class="background-section">
+            <video src="/IMAGES/Vídeo sem título ‐ Feito com o Clipchamp (1).mp4" autoplay loop muted></video>
+        </div>
+        <div class="txt-1">
+            <div class="txt-2">
+                <h1 class="valorant"><strong>COMECE O SEU FUTURO</strong></h1>
+                <p class="txt">Pare de se perguntar o por que não começou a estudar TI antes! Aprenda a explorar os diversos softwares do mundo da informática e mantenha-se atualizado com as necessidades do mundo tecnológico. Sua jornada começa agora!</p>
+                <button><a class="curio" href="#cursos"><strong>DESCUBRA</strong></a></button>
+            </div>
+            <img class="img-graduacao" src="/IMAGES/group-young-people-doing-experiments-robotics-laboratory-girls-protective-glasses.jpg" alt="">
+        </div>
+    </section>
+
+    <!-- VESTIBULAR -->
+    <section id="vestibular">
+        <div>
+            <img class="post" src="/IMAGES/Post para Instagram Vestibular Laranja e Roxo (2).png" alt="">
+        </div>
+        <div class="txt-3">
+            <h1 class="valorant"><strong>VESTIBULAR 2025</strong></h1>
+            <p class="txt">Estão abertas as inscrições para o nosso vestibular! Oferecemos uma formação inovadora em um ambiente que estimula a criatividade e o pensamento crítico. Nossos cursos são projetados para preparar você para os desafios do mercado de trabalho moderno, com foco em tecnologias emergentes e metodologias de ensino avançadas.</p>
+        </div>
+    </section>
+
+    <!-- NEXT -->
+    <section id="next">
+        <p class="tx1">Nossa academia de programação se destaca por meio do projeto NEXT, que prepara nossos alunos para o mercado de trabalho ainda durante a faculdade. Com uma abordagem prática e parcerias com empresas, nossos estudantes desenvolvem habilidades essenciais e conquistam estágios antes de se formarem. O NEXT transforma a educação em uma experiência real, garantindo um futuro promissor na área de tecnologia.</p>
+        <img class="imgnext" src="/IMAGES/NEXT.png" alt="">
+    </section>
+
+    <!-- CURSOS -->
+    <section id="cursos">
+        <h1 class="card-curso">NOSSOS CURSOS</h1>
+        <div class="cursos1">
+            <div class="cursos-1">
+                <div class="descricao">
+                    <h5 class="principal">CIÊNCIAS DA <br> COMPUTAÇÃO</h5>
+                    <p class="desc">IT ENCOMPASSES A VARIETY OF AREAS, INCLUDING ALGORITHMS,<br> DATA STRUCTURES, PROGRAMMING, COMPUTER ARCHITECTURE <br><strong>BACHARELADO: 5 ANOS</strong></p>
+                </div>
+            </div>
+            <div class="cursos-1">
+                <div class="descricao">
+                    <h5 class="principal">INTELIGÊNCIA <br> ARTIFICIAL</h5>
+                    <p class="desc">MACHINE LEARNING, IA <br>GENERATIVA E NATURAL <br> LANGUAGE PROCESSING <br><strong>TECNÓLOGO: 2 ANOS</strong></p>
+                </div>
+            </div>
+            <div class="cursos-1">
+                <div class="descricao">
+                    <h5 class="principal">WEB DESIGN</h5>
+                    <p class="desc">USER EXPERIENCE, SOCIAL MEDIA <br> MARKETING, LOW/NO CODE & FRONT- <br>END DEVELOPMENT <br><strong>TECNÓLOGO: 2 ANOS</strong></p>
+                </div>
+            </div>
+        </div>
+        <div class="cursos2">
+            <div class="cursos-2">
+                <div class="descricao">
+                    <h5 class="principal">ENGENHARIA DE <br> COMPUTAÇÃO</h5>
+                    <p class="desc">HIGH PERFORMANCE SYSTEM, ADVANCED COMPUTING<br> & SMART SOCIETY <br><strong>BACHARELADO: 5 ANOS</strong></p>
+                </div>
+            </div>
+            <div class="cursos-2">
+                <div class="descricao">
+                    <h5 class="principal">DESENVOLVIMENTO DE JOGOS</h5>
+                    <p class="desc"><strong>TECNÓLOGO: 2 ANOS</strong></p>
+                </div>
+            </div>
+            <div class="cursos-2">
+                <div class="descricao">
+                    <h5 class="principal">ENGENHARIA DE <br> SOFTWARE</h5>
+                    <p class="desc">FULL STACK & DEVSECOPS<br><strong>BACHARELADO: 4 ANOS</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="formulario">
+        <div class="interface">
+            <h2 class="titulo">ENTRE EM CONTATO</h2>
+            <form action="">
+                <input type="text" placeholder="Seu nome completo:" required>
+                <input type="text" placeholder="Seu email:" required>
+                <input type="text" placeholder="Seu celular:">
+                <textarea placeholder="Sua mensagem:" required></textarea>
+                <div class="btn-enviar"><input type="submit" value="ENVIAR"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Script principal -->
+    <script src="/JAVA SCRIPT/projeto.js"></script>
+
+    <!-- Acessibilidade VLibras -->
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper></div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+</html>
